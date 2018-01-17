@@ -31,7 +31,10 @@ class TodosController < ApplicationController
       render "edit"
     end
   end
-
+  
+  def index
+    @todo = Todo.all
+  end
   private
   
     def todos_params
